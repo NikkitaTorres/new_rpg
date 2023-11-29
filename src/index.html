@@ -4,10 +4,13 @@
   <title>RPG</title>
 </head>
 <body>
-  <label for="characterClass">Select a Character Class:</label>
-  <select id="characterClass"></select>
-  <option value="warrior">Warrior</option>
-  <option value="mage">Mage</option>
+  <form id="characterForm">
+    <label for="characterClass">Select a Character Class:</label>
+    <select id="characterClass">
+      <option value="warrior">Warrior</option>
+      <option value="mage">Mage</option>
+    </select>
+    <button type="submit">Create Character</button>
+  </form>
 </body>
-<button onclick="createCharacter()">Create Character</button>
 </html>

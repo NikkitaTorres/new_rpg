@@ -16,11 +16,12 @@ const characterClasses = {
 };
 
 //UI Logic
-function createCharacter() {
+document.getElementById('characterForm').addEventListener('submit', function(event){
+  event.preventDefault();
   const selectedClass = document.getElementById('characterClass').value;
-  
-  if (!characterClasses[selectedClass]) {
-    alert(`Invalid character class: ${selectedClass}`);
+
+  if(!characterClasses[selectedClass]) {
+    alert(`Invalid selection ${selectedClass}`);
     return;
   }
 
@@ -30,4 +31,4 @@ function createCharacter() {
   };
 
   console.log('New Character:', newCharacter);
-}
+})
