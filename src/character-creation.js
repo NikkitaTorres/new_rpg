@@ -15,20 +15,5 @@ const characterClasses = {
   // Add more classes as needed
 };
 
-//UI Logic
-document.getElementById('characterForm').addEventListener('submit', function(event){
-  event.preventDefault();
-  const selectedClass = document.getElementById('characterClass').value;
+export default characterClasses;
 
-  if(!characterClasses[selectedClass]) {
-    alert(`Invalid selection ${selectedClass}`);
-    return;
-  }
-
-  const newCharacter = {
-    class: characterClasses[selectedClass].name,
-    ...characterClasses[selectedClass],
-  };
-
-  console.log('New Character:', newCharacter);
-})
